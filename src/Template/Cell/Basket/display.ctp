@@ -1,9 +1,9 @@
 <?php if($baskets->first() !== null): ?>
         <nav class="hidden-xs hidden-sm pull-right" style="position:relative">
-                <div id="show-shop-cart" class="btn btn-primary verticaltext" style="display: none;">
+                <div id="show-shop-cart" class="btn btn-primary verticaltext">
                         <span class="glyphicon glyphicon-shopping-cart"></span> Panier
                 </div>
-                <div id="shop-cart" class="panel panel-primary">
+                <div id="shop-cart" class="panel panel-primary" style="display: none;">
                         <div class="panel-heading text-center">
                                 <div class="pull-left">
                                         <span id="hide-shop-cart" class="btn btn-xs glyphicon glyphicon-menu-right"></span>
@@ -44,6 +44,10 @@
                                 <?= $this->Html->link(__('Order it'),['controller'=>'Orders','action' => 'add'],['class' => 'btn btn-success']) ?>
                         </div>
                 </div>
+        </nav>
+        <!-- mobile -->
+        <nav class="hidden-md hidden-lg pull-right">
+                <span class="label label-success"><span class="glyphicon glyphicon-shopping-cart"></span> <?= $mobile ?></span>
         </nav>
 <?php endif; ?>
 

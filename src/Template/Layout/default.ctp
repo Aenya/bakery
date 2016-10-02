@@ -38,7 +38,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
 <?= $this->element('navigation') ?>
+
 <?= $this->cell('Basket') ?>
+
 <?= $this->Flash->render() ?>
 
 <?= $this->fetch('content') ?>

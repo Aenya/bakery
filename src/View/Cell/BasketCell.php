@@ -40,7 +40,9 @@ class BasketCell extends Cell
                 'total' => 'sum(Products.price * Baskets.quantity)'
             ]
         ]);
+        $mobile = $this->Baskets->find('all')->where(['user_id' => $this->request->session()->read('Auth.User.id')])->count();
         $this->set(compact('baskets'));
         $this->set('total',$total);
+        $this->set('mobile',$mobile);
     }
 }

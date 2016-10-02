@@ -1,10 +1,3 @@
-$(function () {
-    if($('#shop-cart').show())
-    {
-        $('.containers').removeClass('col-md-offset-2 col-lg-offset-2');
-    }
-})
-
 $('#show-shop-cart').on('click',function(){
     $(this).hide();
     $('#shop-cart').show();
